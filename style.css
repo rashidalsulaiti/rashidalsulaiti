@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	padding:30px;
+	margin-top:70px;
+	background-size: cover;
+	height: 100vh;
+}
+.wrapper1{
+	margin-top:50px;
+	background: url(aboutus.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.wrapper2{
+	margin-top:50px;
+	background: url(services.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.wrapper3{
+		margin-top:50px;
+
+	background: url(contactus.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+}
+.navbar .logo{
+	width: 140px;
+	height: auto;
+	padding: 20px 100px;
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: red;
+	border-radius: 2px;
+}
+.wrapper .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+.center h1{
+	color: white;
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}
+.center h2{
+	color: white;
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+.center .buttons{
+	margin: 35px 280px;
+}
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffb3b3;
+	background: red;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #cc0000;
+	border-radius: 25px;
+	transition: .4s;
+}
+.buttons .btn2{
+	margin-left: 25px;
+}
+.buttons button:hover{
+	background: #cc0000;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+	background-image: linear-gradient( 180deg,  rgba(247,247,247,1) 23.8%, rgba(252,221,221,1) 92% );
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0;
+}
+
+.results {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.result {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	height: 400px;
+	width: 300px;
+}
+
+.result img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	background-color: darksalmon;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+button:focus {
+	outline: none
+}
+

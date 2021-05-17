@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Website</title>
+	<link rel="stylesheet" href="style.css">
+	<nav class="navbar">
+				<img class="logo" src="logo.png">
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					
+				</ul>
+			</nav>
+	
+</head>
+<marquee behavior="alternate" bgcolor="#bb3434" direction="left" height:="" 
+		loop="7" scrollamount="3" scrolldelay="2" width="100%">
+		<span style="font-size: 20px;color:#FFFFFF">
+		Latest news! Latest news! Latest news! Latest news!</span>
+		</marquee>
+<body>
+	<div class="wrapper">
+			
+			
+			<div class="center">
+			
+			
+			
+			<div class="results">
+	<div id="cat_result" class="result">
+		<p>Random Cat Placeholder</p>
+	</div>
+	<div id="dog_result" class="result">
+		<p>Random Dog Placeholder</p>
+	</div>
+</div>
+
+<div class="buttons">
+	<button id="cat_btn">Get Cat</button>
+	<button id="dog_btn">Get Dog</button>
+</div>
+			
+		</div>
+		</div>
+</body>
+
+
+<div class="footer">
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify"> <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code.  focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+           
+          </div>
+
+         
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+         <a href="#"></a>.
+            </p>
+          </div>
+
+      
+        </div>
+      </div>
+</footer>
+</div>
+</html>
+
+<script>
+const cat_btn = document.getElementById('cat_btn');
+const dog_btn = document.getElementById('dog_btn');
+const cat_result = document.getElementById('cat_result');
+const dog_result = document.getElementById('dog_result');
+
+cat_btn.addEventListener('click', getRandomCat);
+dog_btn.addEventListener('click', getRandomDog);
+
+function getRandomCat() {
+	fetch('https://aws.random.cat/meow')
+		.then(res => res.json())
+		.then(data => {
+			cat_result.innerHTML = `<img src=${data.file} alt="cat" />`
+		});
+}
+
+function getRandomDog() {
+	fetch('https://random.dog/woof.json')
+		.then(res => res.json())
+		.then(data => {
+			if(data.url.includes('.mp4')) {
+				getRandomDog();
+			}
+			else {
+				dog_result.innerHTML = `<img src=${data.url} alt="dog" />`;
+			}
+		});
+}
+
+</script>
